@@ -5,11 +5,12 @@
   "scripts": {
     "build:bg": "parcel build src/background/index.ts --dist-dir dist/background  --no-source-maps",
     "build:content": "parcel build src/content/index.ts --dist-dir dist/content --no-source-maps",
-    "build": "npm run build:bg && npm run build:content",
+    "build:options": "copyfiles -f src/options/* dist/options",
+    "build:popup": "copyfiles -f src/popup/*  dist/popup",
+    "build": "npm run build:bg && npm run build:content && npm run build:options && npm run build:popup",
     "clean": "rimraf dist",
     "copy:static": "copyfiles manifest.json assets/**/*  dist",
-    "copy:file": "copyfiles src/options/**/* src/popup/**/*  dist",
-    "dist": "npm run clean && npm run build && npm run copy:static && npm run copy:file",
+    "dist": "npm run clean && npm run build && npm run copy:static",
     "lint": "eslint --ext .ts,.tsx ./src"
   },
   "author": "Chunle Tian",
