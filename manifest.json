@@ -1,0 +1,50 @@
+{
+    "name": "Baidu Img Extension",
+    "description": "百度搜索引擎更换logo扩展程序!",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "/background/index.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.baidu.com/"
+            ],
+            "js": [
+                "/content/index.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "/assets/images/*"
+            ],
+            "matches": [
+                "*://www.baidu.com/*"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/assets/icon/get_started16.png",
+            "32": "/assets/icon/get_started32.png",
+            "48": "/assets/icon/get_started48.png",
+            "128": "/assets/icon/get_started128.png"
+        }
+    },
+    "icons": {
+        "16": "/assets/icon/get_started16.png",
+        "32": "/assets/icon/get_started32.png",
+        "48": "/assets/icon/get_started48.png",
+        "128": "/assets/icon/get_started128.png"
+    },
+    "options_page": "options.html"
+}
