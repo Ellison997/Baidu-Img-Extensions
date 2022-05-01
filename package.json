@@ -16,9 +16,6 @@
   "author": "Chunle Tian",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
     "@types/chrome": "0.0.183",
     "copyfiles": "^2.4.1",
     "parcel": "^2.3.2",
