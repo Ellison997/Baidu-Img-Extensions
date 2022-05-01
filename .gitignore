@@ -3,7 +3,6 @@ miniprogram_npm/
 logs/
 npm-debug.log
 yarn-error.log
-dist/
 apidoc/
 uploads/
 .parcel-cache/

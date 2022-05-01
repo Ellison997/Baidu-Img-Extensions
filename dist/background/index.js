@@ -1,0 +1,1 @@
+(()=>{console.log("百度搜索引擎更换logo扩展程序！");let o="#3aa757";chrome.runtime.onInstalled.addListener((()=>{chrome.storage.sync.set({color:o}),console.log("Default background color set to %cgreen","color: #3aa757")})),chrome.runtime.onSuspend.addListener((()=>{}))})();
